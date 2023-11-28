@@ -1,3 +1,9 @@
+## Task 1 Linux Script Command
+
+[viewed online here](https://github.com/Abhinya0501/Xenonstackproject/tree/main/internsctl).
+
+
+
 # E-commerce Demo
 
 This is a sample application that demonstrates an E-commerce website. 
