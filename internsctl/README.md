@@ -111,3 +111,52 @@ esac
 
 # made by abhishek email: abhinyarajput@gmail.com
 ```
+
+## Flowchart
+
+```bash
+start
+|--> Check for --help or --version flag
+|   |   |   Yes: Display help or version information
+|   |   |   No: Continue
+|   |   +-- Check for command
+|   |   |   Yes: Execute command function
+|   |   |   No: Display help information
+|   +-- Check for command options
+|   |   |   Yes: Execute command function with options
+|   |   |   No: Execute command function without options
+|   +-- Check for command arguments
+|       |   Yes: Execute command function with arguments
+|       |   No: Execute command function without arguments
+|
+end
+```
+
+## Architecture
+
+```bash
++--------------------------------+
+| internsctl                     |
++--------------------------------+
+|                                |
+|   +--------+   +---------+  |
+|   | cpu   |   | memory |  |
+|   +--+---+   +--+---+  |
+|   +--| getinfo |   | getinfo |  |
+|   +--------+   +---------+  |
+|                                |
+|   +--------+   +---------+  |
+|   | user   |   | file   |  |
+|   +--+---+   +--+---+  |
+|   +--| create |   | getinfo |  |
+|   |   | list |   +--+---+  |
+|   +--+---+       |          |
+|   |           |       |   +--+--+
+|   |   --sudo-only |       |   | --size |
+|   |               |       |   | --permissions |
+|   |               |       |   | --owner |
+|   |               |       |   | --last-modified |
+|   +---------------+       +---------------+
+|
+```
+![WhatsApp Image 2023-11-28 at 04 24 16_b64a39c7](https://github.com/Abhinya0501/Xenonstackproject/assets/63992983/fe0ce517-bdef-42a6-ad3c-0cc2c17edfb2)
